@@ -8,7 +8,7 @@ using System;
 
 public class Leaderboard : MonoBehaviour
 {
-    [SerializeField] private string _leaderboardPublicKey = "2aa37bed856f4b0351ce178680c618c480c8fea605913b778950129326e72a28";
+    [SerializeField] private string _leaderboardPublicKey = "0f9611374f45d16c5e2b3d60d78f856f0788670429e542880e9019977f50d66d";
     [SerializeField] private TextMeshProUGUI _playerScoreText;
     [SerializeField] private TMP_InputField _usernameInput;
     [SerializeField] private List<TextMeshProUGUI> _entryFields;
