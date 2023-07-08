@@ -31,4 +31,6 @@ public class BlurrableObject : MonoBehaviour
     {
         _spriteRenderer.material = material;
     }
+
+    public Material Material { get => _spriteRenderer.material; }
 }

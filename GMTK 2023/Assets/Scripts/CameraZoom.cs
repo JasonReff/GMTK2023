@@ -9,11 +9,11 @@ public class CameraZoom : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Q))
         {
             ChangeZoom(_zoomSpeed);
         }
-        else if (Input.GetKey(KeyCode.Q))
+        else if (Input.GetKey(KeyCode.E))
         {
             ChangeZoom(-_zoomSpeed);
         }
@@ -31,5 +31,10 @@ public class CameraZoom : MonoBehaviour
             newSize = _maximumZoom;
         }
         _camera.orthographicSize = newSize;
+    }
+
+    public float ZoomLevel()
+    {
+        return 1 /_camera.orthographicSize;
     }
 }

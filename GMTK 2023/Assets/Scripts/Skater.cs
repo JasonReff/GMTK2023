@@ -12,6 +12,7 @@ public class Skater : MonoBehaviour
     [SerializeField] private SkaterAnimations _animations;
     [SerializeField] private float _lossFactorM, _lossFactorC;
     [SerializeField] private AnimationCurve _jumpCurve;
+    [SerializeField] private Material _focusMaterial;
     private float _pumpTimer, _moveTimer;
     private List<float> _ratesSeen = new List<float>();
     public bool IsDoingTrick;
@@ -149,5 +150,12 @@ public class Skater : MonoBehaviour
         var newSpeed = speeds.Rand();
         _ratesSeen.Add(newSpeed);
         _pumpRate = newSpeed;
+    }
+
+    public bool IsInFocus()
+    {
+        if (_blurrable.Material == _focusMaterial)
+            return true;
+        return false;
     }
 }

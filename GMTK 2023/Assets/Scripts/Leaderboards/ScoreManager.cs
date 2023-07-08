@@ -6,34 +6,29 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private ScoreKeeper _scoreKeeper;
-    [SerializeField] private int _score = 0, _highScore = 0;
+    [SerializeField] private float _score = 0, _highScore = 0;
     [SerializeField] private TextMeshProUGUI _scoreTextbox, _highScoreTextbox, _endScoreTextbox, _endHighScore;
-    public int Score { get => _score; }
+    public int Score { get => (int)_score; set => _score = value; }
 
     private void Start()
     {
-        _endScoreTextbox.text = $"Delivered: 0";
+        _score = 0;
         _highScore = _scoreKeeper.HighScore;
     }
 
     private void Update()
     {
-        _scoreTextbox.text = $"{_score}";
-        _highScoreTextbox.text = $"{_highScore}";
+        _scoreTextbox.text = $"Score: {Score}";
+        _highScoreTextbox.text = $"High Score: {(int)_highScore}";
     }
 
-    public void OnPackageDelivered()
+    public void AddScore(float score)
     {
-        _score++;
+        _score += score;
         if (_score > _highScore)
         {
             _highScore = _score;
-            _scoreKeeper.SetHighScore(_highScore);
+            _scoreKeeper.SetHighScore((int)_highScore);
         }
-        _endScoreTextbox.text = $"Delivered: {_score}";
-        _endHighScore.text = $"Record: {_highScore}";
     }
-
-
-
 }
