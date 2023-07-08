@@ -182,6 +182,7 @@ MonoBehaviour:
   _pumpRate: 1
   _pumpForce: 4
   _moveRate: 10
+  _trickBoost: 1
   _pumpRates:
   - 1
   - 0.5

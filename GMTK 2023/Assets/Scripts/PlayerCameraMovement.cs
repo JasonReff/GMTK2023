@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerCameraMovement : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
-    [SerializeField] private float _movementSpeed = 1f, _cameraMovementSpeed = 0.1f;
+    [SerializeField] private float _movementSpeed = 1f, _cameraMovementSpeed = 0.1f, _driftSpeed = 0.01f;
     [SerializeField] private float _lowestBound, _highestBound, _leftestBound, _rightestBound;
 
     private void Update()
     {
-        MovePosition(new Vector2(Input.GetAxisRaw("Horizontal") * _movementSpeed, Input.GetAxisRaw("Vertical") * _movementSpeed));
+        MovePosition(new Vector2(Input.GetAxisRaw("Horizontal") * _movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * _movementSpeed * Time.deltaTime));
+        CameraDrift();
     }
 
     private void MovePosition(Vector2 movement)
@@ -33,5 +34,10 @@ public class PlayerCameraMovement : MonoBehaviour
             newPosition.x = _rightestBound;
         }
         transform.localPosition = newPosition;
+    }
+
+    private void CameraDrift()
+    {
+        transform.localPosition = transform.localPosition - transform.localPosition * _driftSpeed * Time.deltaTime;
     }
 }

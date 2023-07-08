@@ -6,7 +6,7 @@ public class Skater : MonoBehaviour
 {
     [SerializeField] private BlurrableObject _blurrable;
     [SerializeField] private SkaterLane _currentLane;
-    [SerializeField] private float _speedLoss = 1f, _pumpRate = 2f, _pumpForce = 5f, _moveRate = 10f;
+    [SerializeField] private float _speedLoss = 1f, _pumpRate = 2f, _pumpForce = 5f, _moveRate = 10f, _trickBoost = 5f;
     [SerializeField] private List<float> _pumpRates = new List<float>();
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private SkaterAnimations _animations;
@@ -70,6 +70,7 @@ public class Skater : MonoBehaviour
 
     public void Jump(float height, float duration)
     {
+        _rigidbody.AddForce(new Vector2(_trickBoost, 0f), ForceMode2D.Impulse);
         var baseHeight = transform.localPosition.y;
         StartCoroutine(JumpCoroutine());
         _animations.Jump(height >= 2f);
@@ -92,8 +93,10 @@ public class Skater : MonoBehaviour
 
     public void Crouch(float duration)
     {
+        _rigidbody.AddForce(new Vector2(_trickBoost, 0f), ForceMode2D.Impulse);
         StartCoroutine(CrouchCoroutine());
         _animations.Crouch();
+        
         IEnumerator CrouchCoroutine()
         {
             IsDoingTrick = true;
