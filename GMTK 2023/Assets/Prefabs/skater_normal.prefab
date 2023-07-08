@@ -181,6 +181,11 @@ MonoBehaviour:
   _speedLoss: 0.06
   _pumpRate: 1
   _pumpForce: 2.5
+  _moveRate: 10
+  _pumpRates:
+  - 1
+  - 0.5
+  - 3
   _rigidbody: {fileID: 6219756617841766487}
   _animations: {fileID: 523986803604151556}
 --- !u!114 &523986803604151556
