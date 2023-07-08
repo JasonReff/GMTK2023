@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfb619c1d4e34e44a36dcb915fad1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 1.5
+  _movementSpeed: 3.5
   Lane: {fileID: 0}
   _crouchDuration: 1
   _spawnOffset: 2

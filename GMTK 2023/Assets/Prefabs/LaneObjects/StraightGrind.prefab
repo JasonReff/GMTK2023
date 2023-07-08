@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c275245dd0f2310428382dfaca223738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 1
+  _movementSpeed: 3
   Lane: {fileID: 0}
   Lane2: {fileID: 0}
   Direction: 2
