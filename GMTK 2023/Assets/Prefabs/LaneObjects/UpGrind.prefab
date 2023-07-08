@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892115452259610415, guid: 4e46dc4d40973d04e8d8704d775ff509, type: 3}
       propertyPath: _duration
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 892115452259610415, guid: 4e46dc4d40973d04e8d8704d775ff509, type: 3}
       propertyPath: _animationCurve.m_Curve.Array.size

@@ -14,7 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: _jumpDuration
-      value: 2
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: _movementSpeed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 980733340452835792, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_Name
@@ -22,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.8
+      value: 2.7428572
       objectReference: {fileID: 0}
     - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.7
+      value: 1.5428572
       objectReference: {fileID: 0}
     - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_RootOrder

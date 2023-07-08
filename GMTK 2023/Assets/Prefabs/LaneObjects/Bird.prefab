@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.8
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.7
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_RootOrder
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfb619c1d4e34e44a36dcb915fad1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 3.5
+  _movementSpeed: 8.5
   Lane: {fileID: 0}
-  _crouchDuration: 1
+  _crouchDuration: 0.5
   _spawnOffset: 2
