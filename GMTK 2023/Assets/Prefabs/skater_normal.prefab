@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2207891457648271390}
   - component: {fileID: 6219756617841766487}
   - component: {fileID: 9204616841096173757}
+  - component: {fileID: 5930488611390375462}
+  - component: {fileID: 523986803604151556}
   m_Layer: 0
   m_Name: skater_normal
   m_TagString: Untagged
@@ -33,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6546415817229000717
 SpriteRenderer:
@@ -113,7 +115,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -162,3 +164,39 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.66, y: 2.3833334}
   m_Direction: 0
+--- !u!114 &5930488611390375462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439937370280144679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5ab60751288b940ba496caaedaffd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blurrable: {fileID: 2207891457648271390}
+  _currentLane: {fileID: 0}
+  _speedLoss: 0.06
+  _pumpRate: 1
+  _pumpForce: 2.5
+  _rigidbody: {fileID: 6219756617841766487}
+  _animations: {fileID: 523986803604151556}
+--- !u!114 &523986803604151556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439937370280144679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041affc03e22f024694e0ca30718641a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 6546415817229000717}
+  _animationTime: 0.1
+  _pumpSprites:
+  - {fileID: 21300000, guid: dc05590258fdd0d44936d1f35bfe105e, type: 3}
+  - {fileID: 21300000, guid: 33f708f0d4c041d489c6aeee8311de7c, type: 3}
