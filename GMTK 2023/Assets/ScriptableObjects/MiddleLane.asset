@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FunctionalObjects:
   - {fileID: 6086490256312620729, guid: 3c13227e6114fcb43a1bc3eab8cb9f53, type: 3}
-  DecorativeObjects: []
+  DecorativeObjects:
+  - {fileID: 3151114986898025971, guid: 81d0cf1f3e3227147857df3a65778c8b, type: 3}
+  - {fileID: 1340226224837567086, guid: d14fea203b4f93b4da82ba0ea68bf876, type: 3}
+  - {fileID: 8968447672950681780, guid: 843fa085065ef5346a7ea5665efca6d9, type: 3}
+  - {fileID: 1336423683166045354, guid: af3d98d8888846f45926597f7126bb30, type: 3}

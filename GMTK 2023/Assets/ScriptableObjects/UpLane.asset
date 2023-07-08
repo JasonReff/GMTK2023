@@ -18,4 +18,8 @@ MonoBehaviour:
   - {fileID: 892115452259610415, guid: 4e46dc4d40973d04e8d8704d775ff509, type: 3}
   - {fileID: 3226457534925424807, guid: 956110a54d05644489ac5cc5804e4161, type: 3}
   - {fileID: 2759426233852326116, guid: 24c356ad1d03db44f8e2acdd34e5f959, type: 3}
-  DecorativeObjects: []
+  DecorativeObjects:
+  - {fileID: 3151114986898025971, guid: 81d0cf1f3e3227147857df3a65778c8b, type: 3}
+  - {fileID: 1340226224837567086, guid: d14fea203b4f93b4da82ba0ea68bf876, type: 3}
+  - {fileID: 8968447672950681780, guid: 843fa085065ef5346a7ea5665efca6d9, type: 3}
+  - {fileID: 1336423683166045354, guid: af3d98d8888846f45926597f7126bb30, type: 3}
