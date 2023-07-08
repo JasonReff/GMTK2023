@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7679893697980757242}
   - component: {fileID: 2860880877775496223}
   - component: {fileID: 2298197829937222419}
+  - component: {fileID: 2289970186114842594}
   m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   - {fileID: 3811633176737019148}
   - {fileID: 5088631334746855193}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4632863693654378666
 SpriteRenderer:
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 969903062981238352}
-  _movementSpeed: 0.01
+  _movementSpeed: 0.02
   _cameraMovementSpeed: 0.1
 --- !u!61 &2860880877775496223
 BoxCollider2D:
@@ -199,6 +200,22 @@ MonoBehaviour:
   _blur1: {fileID: 2100000, guid: a9b1ff2e68445a3498f42174c92a9d3e, type: 2}
   _blur2: {fileID: 2100000, guid: 9952ca10168e0974386ffa45fb158a5e, type: 2}
   _boxCollider: {fileID: 2860880877775496223}
+--- !u!114 &2289970186114842594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5723093252566025914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff93fdbdc6a3559438c8202d9af9fef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minimumZoom: 0.5
+  _maximumZoom: 2
+  _zoomSpeed: 0.02
+  _camera: {fileID: 969903062981238352}
 --- !u!1 &7018696601848295559
 GameObject:
   m_ObjectHideFlags: 0
