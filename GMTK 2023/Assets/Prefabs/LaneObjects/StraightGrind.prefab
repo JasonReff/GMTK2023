@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &604805187201795321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 980733340452835792, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_Name
+      value: StraightGrind
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_Size.x
+      value: 6.774817
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.039409876
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526434945259667164, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128768810048413532, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433987877685845690, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91083995779e1e14ebfe84323b1056a3, type: 3}
+    m_RemovedComponents:
+    - {fileID: 5500120009016502671, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+    - {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 980733340452835792, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 892115452259610415}
+  m_SourcePrefab: {fileID: 100100000, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+--- !u!1 &430358591768679721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 980733340452835792, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+  m_PrefabInstance: {fileID: 604805187201795321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &892115452259610415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430358591768679721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c275245dd0f2310428382dfaca223738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 1
+  Lane: {fileID: 0}
+  Lane2: {fileID: 0}
+  Direction: 2
+  _animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.12033101
+      value: 0.8618712
+      inSlope: -0.31076148
+      outSlope: -0.31076148
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.35666257
+    - serializedVersion: 3
+      time: 0.29494983
+      value: 0.20524698
+      inSlope: 0.004800882
+      outSlope: 0.004800882
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.12234753
+    - serializedVersion: 3
+      time: 0.49830735
+      value: 0.20887041
+      inSlope: 0.017903432
+      outSlope: 0.017903432
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07967613
+    - serializedVersion: 3
+      time: 0.72732097
+      value: 0.2174614
+      inSlope: 0.03514899
+      outSlope: 0.03514899
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.21705733
+    - serializedVersion: 3
+      time: 0.86301374
+      value: 0.8882199
+      inSlope: 0.0029062636
+      outSlope: 0.0029062636
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99501866
+      value: -0.0039920807
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99626404
+      value: -0.00000011920929
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  _height: 2
+  _duration: 4

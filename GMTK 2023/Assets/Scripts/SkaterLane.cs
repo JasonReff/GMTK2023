@@ -9,8 +9,12 @@ public class SkaterLane : MonoBehaviour
     [SerializeField] private float _spawnRate;
     [SerializeField] private Transform _objectSpawnPoint;
     [SerializeField] private float _spawnTimer;
+    [SerializeField] private float _objectSize;
+    [SerializeField] private SkaterLane _upLane, _downLane;
 
     public int FocusLayer { get => _focusLayer; }
+    public SkaterLane UpLane { get => _upLane;  }
+    public SkaterLane DownLane { get => _downLane;  }
 
     private void Update()
     {
@@ -18,7 +22,9 @@ public class SkaterLane : MonoBehaviour
         if (_spawnTimer < 0)
         {
             var laneObject = Instantiate(_objectPool.RandomObject(), _objectSpawnPoint.transform.position, Quaternion.identity);
-            laneObject.Lane = this;
+            laneObject.transform.localScale = new Vector3(_objectSize, _objectSize, _objectSize);
+            laneObject.SetLane(this);
+            _spawnTimer = _spawnRate;
         }
     }
 }

@@ -16,6 +16,11 @@ public class BlurrableObject : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    public void SetLayer(int layer)
+    {
+        _focusLayer = layer;
+    }
+
     public void ChangeLayer(int layer)
     {
         _focusLayer = layer;

@@ -8,6 +8,31 @@ public class LaneObject : MonoBehaviour
 
     private void Update()
     {
-        transform.localPosition = (Vector2)transform.localPosition + new Vector2(-_movementSpeed, 0);
+        transform.localPosition = (Vector2)transform.localPosition + new Vector2(-_movementSpeed, 0) * Time.deltaTime;
+    }
+
+    public virtual void SetLane(SkaterLane lane)
+    {
+        Lane = lane;
+        var blurrable = GetComponent<BlurrableObject>();
+        blurrable.SetLayer(Lane.FocusLayer);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out Skater skater))
+        {
+            if (skater.GetComponent<BlurrableObject>().FocusLayer == Lane.FocusLayer && !skater.IsDoingTrick)
+                Activate(skater);
+        }
+        else if (collision.TryGetComponent(out ObjectDespawner despawner))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public virtual void Activate(Skater skater)
+    {
+        
     }
 }
