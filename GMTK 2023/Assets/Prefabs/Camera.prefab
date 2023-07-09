@@ -464,6 +464,7 @@ MonoBehaviour:
   _maximumZoom: 2
   _zoomSpeed: 0.01
   _camera: {fileID: 969903062981238352}
+  _collider: {fileID: 0}
 --- !u!210 &1630905595455586241
 SortingGroup:
   m_ObjectHideFlags: 0
