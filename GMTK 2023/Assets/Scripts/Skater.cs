@@ -10,10 +10,15 @@ public class Skater : MonoBehaviour
     [SerializeField] private List<float> _pumpRates = new List<float>();
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private SkaterAnimations _animations;
+    [Header("Movement")]
+    [SerializeField] private float _setLossRate = 5f;
     [SerializeField] private float _lossFactorM, _lossFactorC;
+    [SerializeField] private List<float> _horizontalPositions;
+    private List<float> _positionsSeen = new List<float>();
+    [Space(5)]
     [SerializeField] private AnimationCurve _jumpCurve;
     [SerializeField] private Material _focusMaterial;
-    private float _pumpTimer, _moveTimer;
+    private float _pumpTimer, _moveTimer, _lossTimer;
     private List<float> _ratesSeen = new List<float>();
     public bool IsDoingTrick;
 
@@ -26,8 +31,10 @@ public class Skater : MonoBehaviour
     private void Start()
     {
         ChangeSpeed();
+        ChangePosition();
         _pumpTimer = _pumpRate;
         _moveTimer = _moveRate;
+        _lossTimer = _setLossRate;
     }
 
     private void Update()
@@ -36,6 +43,7 @@ public class Skater : MonoBehaviour
             return;
         _pumpTimer -= Time.deltaTime;
         _moveTimer -= Time.deltaTime;
+        _lossTimer -= Time.deltaTime;
         SetSpeedLoss();
         if (_pumpTimer < 0)
         {
@@ -46,6 +54,11 @@ public class Skater : MonoBehaviour
         {
             ChangeSpeed();
             _moveTimer = _moveRate;
+        }
+        if (_lossTimer < 0)
+        {
+            ChangePosition();
+            _lossTimer = _setLossRate;
         }
     }
 
@@ -183,5 +196,19 @@ public class Skater : MonoBehaviour
         var newSpeed = speeds.Rand();
         _ratesSeen.Add(newSpeed);
         _pumpRate = newSpeed;
+    }
+
+    public void ChangePosition()
+    {
+        var positions = new List<float>(_horizontalPositions);
+        if (_positionsSeen.Count == positions.Count)
+            _positionsSeen.Clear();
+        foreach (var position in _positionsSeen)
+        {
+            positions.Remove(position);
+        }
+        var newPosition = positions.Rand();
+        _positionsSeen.Add(newPosition);
+        _lossFactorC = newPosition;
     }
 }
