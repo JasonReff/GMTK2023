@@ -378,7 +378,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -553,7 +553,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -718,7 +718,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -904,7 +904,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -2720,7 +2720,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -2880,7 +2880,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -4398,7 +4398,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -4595,7 +4595,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -6116,7 +6116,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize
@@ -6949,7 +6949,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_text
-      value: '1. AAA: 5000'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164326923317917366, guid: 4b8ee5a48c0fa8844b1290e299989836, type: 3}
       propertyPath: m_fontSize

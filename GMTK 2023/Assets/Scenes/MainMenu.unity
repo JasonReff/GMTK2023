@@ -1923,7 +1923,7 @@ MonoBehaviour:
   _moveDuration: 1
   _moveDelay: 1
   _logoSize: 0.5
-  _logoPosition: {x: -275, y: 175}
+  _logoPosition: {x: -300, y: 180}
   _backdrop: {fileID: 1934016921}
   _logo: {fileID: 2080598893}
 --- !u!1 &1924980861 stripped
@@ -2934,22 +2934,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1392796759823820270, guid: 2de5741cc98001448be81396bd95ed6b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698197622284975273, guid: 2de5741cc98001448be81396bd95ed6b, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952270647345980596, guid: 2de5741cc98001448be81396bd95ed6b, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952270647345980596, guid: 2de5741cc98001448be81396bd95ed6b, type: 3}
-      propertyPath: Mute
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952270647345980596, guid: 2de5741cc98001448be81396bd95ed6b, type: 3}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9136696600392207414, guid: 2de5741cc98001448be81396bd95ed6b, type: 3}
