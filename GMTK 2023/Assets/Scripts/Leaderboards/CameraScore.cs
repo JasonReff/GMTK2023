@@ -10,17 +10,27 @@ public class CameraScore : MonoBehaviour
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private float _scorePerSecond, _focusMultiplier, _zoomMultiplier;
     [SerializeField] private TextMeshProUGUI _zoomTextbox, _focusTextbox, _frameTextbox, _comboTextbox;
-    private float _comboTimer, _comboScore;
+    private float _comboTimer, _comboScore, _timerLength = 1f;
     private int _overlappingColliders = 0;
-    private bool _isComboActive, _skaterInFocus;
+    private bool _skaterInFocus;
     private Coroutine _comboEnd;
 
     private void Update()
     {
         CalculateScore();
-        if (_isComboActive && _comboScore >= 100)
+        _comboTextbox.text = $"Combo: {(int)_comboScore}";
+        if (_overlappingColliders == 0)
         {
-            _comboTextbox.text = $"Combo: {(int)_comboScore}";
+            _comboTimer += Time.deltaTime;
+            if (_comboTimer >= _timerLength)
+            {
+                AddScore(_comboScore);
+                _comboScore = 0;
+            }
+        }
+        else
+        {
+            _comboTimer = 0;
         }
     }
 
@@ -29,11 +39,6 @@ public class CameraScore : MonoBehaviour
         if (collision.TryGetComponent(out Skater skater))
         {
             RateSkater(skater);
-        }
-        else
-        {
-            if (_isComboActive)
-                _comboEnd = StartCoroutine(EndComboCoroutine());
         }
     }
 
@@ -56,11 +61,6 @@ public class CameraScore : MonoBehaviour
 
     private void CalculateScore()
     {
-        if (_comboEnd != null)
-        {
-            StopCoroutine(_comboEnd);
-        }
-        _isComboActive = true;
         var baseScore = _scorePerSecond * _overlappingColliders * Time.deltaTime;
         switch (_overlappingColliders)
         {
@@ -116,13 +116,5 @@ public class CameraScore : MonoBehaviour
     private void AddScore(float score)
     {
         _scoreManager.AddScore(score);
-    }
-
-    private IEnumerator EndComboCoroutine()
-    {
-        _isComboActive = false;
-        yield return new WaitForSeconds(_comboTimer);
-        AddScore(_comboScore);
-        _comboScore = 0;
     }
 }

@@ -34,7 +34,7 @@ public class CameraZoom : MonoBehaviour
             newSize = _maximumZoom;
         }
         _camera.orthographicSize = newSize;
-        _collider.size = _collider.size - new Vector2(amount, amount);
+        _collider.size = _collider.size + new Vector2(amount, amount);
     }
 
     public float ZoomLevel()
