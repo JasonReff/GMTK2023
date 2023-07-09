@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &59716729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3759403367128237136, guid: 7ebb4037768c84b4eb235e5c5f70b8d1, type: 3}
+  m_PrefabInstance: {fileID: 1397118060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145232463
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,15 +465,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2207891457648271390, guid: 9aab1ca8b521509459bc6cdef9ae2bd8, type: 3}
+      propertyPath: _focusMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2439937370280144679, guid: 9aab1ca8b521509459bc6cdef9ae2bd8, type: 3}
       propertyPath: m_Name
       value: skater_normal
       objectReference: {fileID: 0}
+    - target: {fileID: 6546415817229000717, guid: 9aab1ca8b521509459bc6cdef9ae2bd8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aab1ca8b521509459bc6cdef9ae2bd8, type: 3}
+--- !u!114 &1268858205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2298197829937222419, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+  m_PrefabInstance: {fileID: 1778499151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe3f834f48d76a44b19d0cfaa0b1a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1397118060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -568,17 +598,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ebb4037768c84b4eb235e5c5f70b8d1, type: 3}
---- !u!114 &1397118061 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1078183690010437384, guid: 7ebb4037768c84b4eb235e5c5f70b8d1, type: 3}
-  m_PrefabInstance: {fileID: 1397118060}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1402882983 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1649531841822841746, guid: 71c4822774e6f16498b1bb4e82b405d9, type: 3}
@@ -675,6 +694,7 @@ GameObject:
   - component: {fileID: 1640806446}
   - component: {fileID: 1640806445}
   - component: {fileID: 1640806448}
+  - component: {fileID: 1640806449}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -800,6 +820,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1640806449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640806444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f21a33887830c47b5e9a76a4704090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 1640806446}
 --- !u!1 &1659880986
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,9 +873,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3639404042876927710, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _blurManager
+      value: 
+      objectReference: {fileID: 1268858205}
+    - target: {fileID: 3639404042876927710, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: _comboTextbox
       value: 
-      objectReference: {fileID: 1397118061}
+      objectReference: {fileID: 59716729}
     - target: {fileID: 5723093252566025914, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: m_Name
       value: Camera

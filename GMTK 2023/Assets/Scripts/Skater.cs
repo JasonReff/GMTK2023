@@ -151,11 +151,4 @@ public class Skater : MonoBehaviour
         _ratesSeen.Add(newSpeed);
         _pumpRate = newSpeed;
     }
-
-    public bool IsInFocus()
-    {
-        if (_blurrable.Material == _focusMaterial)
-            return true;
-        return false;
-    }
 }
