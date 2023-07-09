@@ -53,7 +53,6 @@ public class Leaderboard : MonoBehaviour
             if (success)
             {
                 _submitting.SetActive(false);
-                
                 Load();
             }
             else
