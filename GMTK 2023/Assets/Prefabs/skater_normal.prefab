@@ -181,16 +181,16 @@ MonoBehaviour:
   _speedLoss: 0.6
   _pumpRate: 1
   _pumpForce: 12
-  _moveRate: 10
+  _moveRate: 5
   _trickBoost: 1
   _pumpRates:
   - 1
-  - 1.5
-  - 3
+  - 0.5
+  - 2
   _rigidbody: {fileID: 6219756617841766487}
   _animations: {fileID: 523986803604151556}
-  _lossFactorM: 0.16
-  _lossFactorC: 0.16
+  _lossFactorM: 0.4
+  _lossFactorC: 0.8
   _jumpCurve:
     serializedVersion: 2
     m_Curve:
