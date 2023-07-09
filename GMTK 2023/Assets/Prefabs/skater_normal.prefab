@@ -507,6 +507,11 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 4
   _focusMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  _skateSound: {fileID: 0}
+  _jumpSound: {fileID: 8300000, guid: 8e1ea4a725c26d248a10bff62010d691, type: 3}
+  _landSound: {fileID: 8300000, guid: 6723f4910a9accd499dcc4859c194f3f, type: 3}
+  _grindSound: {fileID: 8300000, guid: cfe2fe35feddc084ba2b53a908815c36, type: 3}
+  _pumpSound: {fileID: 0}
   IsDoingTrick: 0
 --- !u!114 &523986803604151556
 MonoBehaviour:
