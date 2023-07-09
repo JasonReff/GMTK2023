@@ -19,7 +19,9 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
         _scoreTextbox.text = $"Score: {Score}";
-        _highScoreTextbox.text = $"High Score: {(int)_highScore}";
+        _highScoreTextbox.text = $"Record: {(int)_highScore}";
+        _endScoreTextbox.text = $"Score: {Score}";
+        _endHighScore.text = $"Record: {(int)_highScore}";
     }
 
     public void AddScore(float score)
