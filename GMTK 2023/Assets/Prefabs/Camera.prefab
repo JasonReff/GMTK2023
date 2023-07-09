@@ -382,6 +382,8 @@ MonoBehaviour:
   _movementSpeed: 7
   _cameraMovementSpeed: 0.5
   _driftSpeed: 0.75
+  _shakeRate: 0.2
+  _shakeStrength: 1
   _lowestBound: -3.5
   _highestBound: 2.5
   _leftestBound: -7
