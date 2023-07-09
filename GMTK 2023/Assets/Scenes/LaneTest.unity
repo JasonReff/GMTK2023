@@ -839,10 +839,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1655223778908978405, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
+    - target: {fileID: 1655223778908978405, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2882945668341616364, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
+    - target: {fileID: 1655223778908978405, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283869297101484737, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.222
+      objectReference: {fileID: 0}
     - target: {fileID: 3639404042876927710, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: _comboTextbox
       value: 
       objectReference: {fileID: 1397118061}
+    - target: {fileID: 4270123551575089249, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
+    - target: {fileID: 4270123551575089249, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2882945668341616364, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
+    - target: {fileID: 4270123551575089249, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437536246034432792, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
+    - target: {fileID: 5437536246034432792, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2882945668341616364, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
+    - target: {fileID: 5437536246034432792, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437536246034432792, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5723093252566025914, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: m_Name
       value: Camera
