@@ -6,6 +6,7 @@ public class CameraScore : MonoBehaviour
 {
     [SerializeField] private ScoreManager _scoreManager;
     [SerializeField] private CameraZoom _zoom;
+    [SerializeField] private BlurManager _blurManager;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private float _scorePerSecond, _focusMultiplier, _zoomMultiplier;
     [SerializeField] private TextMeshProUGUI _zoomTextbox, _focusTextbox, _frameTextbox, _comboTextbox;
@@ -94,7 +95,7 @@ public class CameraScore : MonoBehaviour
             _focusTextbox.color = Color.red;
         }
         baseScore *= _zoom.ZoomLevel() * _zoomMultiplier;
-        if (_zoom.ZoomLevel() * _zoomMultiplier > 1)
+        if (_zoom.ZoomLevel() * _zoomMultiplier > 1.5f)
         {
             _zoomTextbox.text = "Zoom: Tight";
             _zoomTextbox.color = Color.green;
@@ -109,7 +110,7 @@ public class CameraScore : MonoBehaviour
 
     private void RateSkater(Skater skater)
     {
-        _skaterInFocus = skater.IsInFocus();
+        _skaterInFocus = skater.GetComponent<BlurrableObject>().FocusLayer == _blurManager.FocusLayer;
     }
 
     private void AddScore(float score)
@@ -121,6 +122,7 @@ public class CameraScore : MonoBehaviour
     {
         _isComboActive = false;
         yield return new WaitForSeconds(_comboTimer);
-
+        AddScore(_comboScore);
+        _comboScore = 0;
     }
 }
