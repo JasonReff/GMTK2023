@@ -772,9 +772,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<B>Zooming</B>
+  m_text: 'Shoot the gnarliest skater video of all time within the time limit!
 
-    lorum ipsum'
+
+    <B>Move:</B>
+    WASD ----- (don''t be lame, Keep him in frame)
+
+
+    <B>Zoom:</B> Q,E ------------------
+    (More Zoom, More Points)
+
+
+    <B>Focus:</B> J,K,L  ----- (He Swaps Lanes, You
+    Swap Focus)
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
   m_sharedMaterial: {fileID: 2882945668341616364, guid: c9b50b26ee0eae048b0ea3c73e664727, type: 2}
@@ -801,14 +813,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1746,6 +1758,18 @@ PrefabInstance:
     - target: {fileID: 7501435476331748490, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2986,6 +3010,18 @@ PrefabInstance:
     - target: {fileID: 7501435476331748490, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4794,6 +4830,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5271,6 +5319,18 @@ PrefabInstance:
     - target: {fileID: 7501435476331748490, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9429908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7847412352702364154, guid: ff4ce7cf2b1a36448ad3e00621e4e1ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
