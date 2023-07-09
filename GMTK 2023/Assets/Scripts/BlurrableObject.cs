@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class BlurrableObject : MonoBehaviour
 {
+    [SerializeField] private Material _focusMaterial;
     [SerializeField] private int _focusLayer = 1;
     private SpriteRenderer _spriteRenderer;
 
@@ -31,6 +32,4 @@ public class BlurrableObject : MonoBehaviour
     {
         _spriteRenderer.material = material;
     }
-
-    public Material Material { get => _spriteRenderer.material; }
 }

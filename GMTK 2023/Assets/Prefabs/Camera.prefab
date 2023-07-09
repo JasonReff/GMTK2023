@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusLayer: 2
-  _focus: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  _focus: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   _blur1: {fileID: 2100000, guid: a9b1ff2e68445a3498f42174c92a9d3e, type: 2}
   _blur2: {fileID: 2100000, guid: 9952ca10168e0974386ffa45fb158a5e, type: 2}
   _boxCollider: {fileID: 2860880877775496223}
@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreManager: {fileID: 0}
   _zoom: {fileID: 2289970186114842594}
+  _blurManager: {fileID: 0}
   _collider: {fileID: 2860880877775496223}
   _scorePerSecond: 5
   _focusMultiplier: 2
