@@ -901,7 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameOver: {fileID: 819164343}
   _timerTextbox: {fileID: 1397118061}
-  _cameraScore: {fileID: 1778499153}
+  _cameraScore: {fileID: 0}
   _timer: 60
 --- !u!4 &819164345
 Transform:
@@ -3304,10 +3304,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 470862424404965264, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _boxCollider
+      value: 
+      objectReference: {fileID: 1778499158}
+    - target: {fileID: 2127249298910868970, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _zoom
+      value: 
+      objectReference: {fileID: 1778499157}
+    - target: {fileID: 2127249298910868970, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 1778499158}
+    - target: {fileID: 2127249298910868970, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _blurManager
+      value: 
+      objectReference: {fileID: 1778499156}
+    - target: {fileID: 2127249298910868970, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _comboTextbox
+      value: 
+      objectReference: {fileID: 59716729}
+    - target: {fileID: 2127249298910868970, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _scoreManager
+      value: 
+      objectReference: {fileID: 363209581}
+    - target: {fileID: 2127249298910868970, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _comboFinishedTextbox
+      value: 
+      objectReference: {fileID: 1397118065}
     - target: {fileID: 2289970186114842594, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: _collider
       value: 
-      objectReference: {fileID: 1778499152}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554113580339303871, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 1778499158}
     - target: {fileID: 3639404042876927710, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: _comboTextbox
       value: 
@@ -3393,25 +3425,36 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38e7725130abc34195c3319741fffdd, type: 3}
---- !u!61 &1778499152 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2860880877775496223, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+--- !u!4 &1778499154 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 387247972977328001, guid: c38e7725130abc34195c3319741fffdd, type: 3}
   m_PrefabInstance: {fileID: 1778499151}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1778499153 stripped
+--- !u!114 &1778499156 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3639404042876927710, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+  m_CorrespondingSourceObject: {fileID: 470862424404965264, guid: c38e7725130abc34195c3319741fffdd, type: 3}
   m_PrefabInstance: {fileID: 1778499151}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2779649336bc64ab10480248e98078, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fe3f834f48d76a44b19d0cfaa0b1a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1778499154 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 387247972977328001, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+--- !u!114 &1778499157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3554113580339303871, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+  m_PrefabInstance: {fileID: 1778499151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff93fdbdc6a3559438c8202d9af9fef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1778499158 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7047749301958587222, guid: c38e7725130abc34195c3319741fffdd, type: 3}
   m_PrefabInstance: {fileID: 1778499151}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1915571578
