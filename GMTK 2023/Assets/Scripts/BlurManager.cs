@@ -8,6 +8,8 @@ public class BlurManager : MonoBehaviour
     [SerializeField] private Material _focus, _blur1, _blur2;
     [SerializeField] private BoxCollider2D _boxCollider;
 
+    public int FocusLayer { get => _focusLayer; }
+
     private void OnEnable()
     {
         BlurrableObject.OnLayerChanged += OnObjectLayerChanged;
