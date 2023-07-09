@@ -138,6 +138,39 @@ public class Skater : MonoBehaviour
         }
     }
 
+    public void RampJump(AnimationCurve movementCurve, AnimationCurve rotationCurve, float height, float duration, SkaterLane nextLane)
+    {
+        var baseHeight = transform.localPosition.y;
+        StartCoroutine(RampCoroutine());
+
+        IEnumerator RampCoroutine()
+        {
+            var switchedLanes = false;
+            bool endingRamp = false;
+            IsDoingTrick = true;
+            var time = 0f;
+            _animations.StartRamp();
+            while (time < duration)
+            {
+                if (time > duration / 2 && switchedLanes == false)
+                {
+                    MoveToLane(nextLane);
+                    switchedLanes = true;
+                }
+                if (time > duration * .75 && endingRamp == false)
+                {
+                    _animations.EndRamp();
+                    endingRamp = true;
+                }
+                transform.localPosition = new Vector2(transform.localPosition.x, baseHeight + height * movementCurve.Evaluate(time / duration));
+                transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 90 * rotationCurve.Evaluate(time / duration)));
+                time += Time.deltaTime;
+                yield return null;
+            }
+            IsDoingTrick = false;
+        }
+    }
+
     public void ChangeSpeed()
     {
         var speeds = new List<float>(_pumpRates);

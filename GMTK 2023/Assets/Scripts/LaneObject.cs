@@ -16,6 +16,7 @@ public class LaneObject : MonoBehaviour
         Lane = lane;
         var blurrable = GetComponent<BlurrableObject>();
         blurrable.SetLayer(Lane.FocusLayer);
+        GetComponent<SpriteRenderer>().sortingOrder = lane.SortingLayer;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

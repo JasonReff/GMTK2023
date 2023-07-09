@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a8dd396560162448de26f700dc17df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _focusMaterial: {fileID: 0}
   _focusLayer: 2
 --- !u!50 &6219756617841766487
 Rigidbody2D:
@@ -544,4 +545,11 @@ MonoBehaviour:
   _endGrindSprites:
   - {fileID: 21300000, guid: ca34c2a65e412ab4bb439ad85b2e19f5, type: 3}
   - {fileID: 21300000, guid: ca34c2a65e412ab4bb439ad85b2e19f5, type: 3}
+  - {fileID: 21300000, guid: 33f708f0d4c041d489c6aeee8311de7c, type: 3}
+  _startRampSprites:
+  - {fileID: 21300000, guid: 6cc0cf6211527d34ca90e40b49b95416, type: 3}
+  - {fileID: 21300000, guid: 6cc0cf6211527d34ca90e40b49b95416, type: 3}
+  - {fileID: 21300000, guid: ca34c2a65e412ab4bb439ad85b2e19f5, type: 3}
+  _endRampSprites:
+  - {fileID: 21300000, guid: 6cc0cf6211527d34ca90e40b49b95416, type: 3}
   - {fileID: 21300000, guid: 33f708f0d4c041d489c6aeee8311de7c, type: 3}
