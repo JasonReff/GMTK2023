@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: _jumpHeight
-      value: 2.2
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: _jumpDuration
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: _movementSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 980733340452835792, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
       propertyPath: m_Name

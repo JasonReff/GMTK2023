@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 969903062981238352}
-  _movementSpeed: 5
-  _cameraMovementSpeed: 0.1
-  _driftSpeed: 0.1
+  _movementSpeed: 7
+  _cameraMovementSpeed: 0.5
+  _driftSpeed: 0.75
   _lowestBound: -3.5
   _highestBound: 2.5
   _leftestBound: -7
@@ -218,9 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff93fdbdc6a3559438c8202d9af9fef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minimumZoom: 0.3
-  _maximumZoom: 3
-  _zoomSpeed: 0.02
+  _minimumZoom: 0.7
+  _maximumZoom: 2
+  _zoomSpeed: 0.01
   _camera: {fileID: 969903062981238352}
 --- !u!210 &1630905595455586241
 SortingGroup:
