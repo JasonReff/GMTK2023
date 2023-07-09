@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +19,12 @@ public class Skater : MonoBehaviour
     [Space(5)]
     [SerializeField] private AnimationCurve _jumpCurve;
     [SerializeField] private Material _focusMaterial;
+    [Header("SoundEffects")]
+    [SerializeField] private AudioClip _skateSound, _jumpSound, _landSound, _grindSound, _pumpSound;
     private float _pumpTimer, _moveTimer, _lossTimer;
     private List<float> _ratesSeen = new List<float>();
     public bool IsDoingTrick;
+    public static event Action OnTrick;
 
     public void MoveToLane(SkaterLane lane)
     {
@@ -30,11 +34,17 @@ public class Skater : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.ToggleSkateboard(true);
         ChangeSpeed();
         ChangePosition();
         _pumpTimer = _pumpRate;
         _moveTimer = _moveRate;
         _lossTimer = _setLossRate;
+    }
+
+    private void OnDisable()
+    {
+        AudioManager.ToggleSkateboard(false);
     }
 
     private void Update()
@@ -78,6 +88,7 @@ public class Skater : MonoBehaviour
 
     public void Pump()
     {
+        AudioManager.PlaySoundEffect(_pumpSound);
         _rigidbody.AddForce(new Vector2(_pumpForce, 0f), ForceMode2D.Impulse);
         _animations.Pump();
     }
@@ -93,6 +104,9 @@ public class Skater : MonoBehaviour
         {
             _rigidbody.drag = 2;
             IsDoingTrick = true;
+            OnTrick?.Invoke();
+            AudioManager.ToggleSkateboard(false);
+            AudioManager.PlaySoundEffect(_jumpSound);
             var time = 0f;
             while (time < duration)
             {
@@ -102,6 +116,8 @@ public class Skater : MonoBehaviour
             }
             IsDoingTrick = false;
             _rigidbody.drag = 5;
+            AudioManager.PlaySoundEffect(_landSound);
+            AudioManager.ToggleSkateboard(true);
         }
     }
 
@@ -114,6 +130,7 @@ public class Skater : MonoBehaviour
         IEnumerator CrouchCoroutine()
         {
             IsDoingTrick = true;
+            OnTrick?.Invoke();
             yield return new WaitForSeconds(duration);
             IsDoingTrick = false;
         }
@@ -129,8 +146,11 @@ public class Skater : MonoBehaviour
             var switchedLanes = false;
             bool endingGrind = false;
             IsDoingTrick = true;
+            OnTrick?.Invoke();
             var time = 0f;
             _animations.StartGrind();
+            AudioManager.ToggleSkateboard(false);
+            AudioManager.PlaySoundEffect(_grindSound);
             while (time < duration)
             {
                 if (time > duration / 2 && switchedLanes == false)
@@ -147,6 +167,7 @@ public class Skater : MonoBehaviour
                 time += Time.deltaTime;
                 yield return null;
             }
+            AudioManager.ToggleSkateboard(true);
             IsDoingTrick = false;
         }
     }
@@ -161,7 +182,10 @@ public class Skater : MonoBehaviour
             var switchedLanes = false;
             bool endingRamp = false;
             IsDoingTrick = true;
+            OnTrick?.Invoke();
             var time = 0f;
+            AudioManager.ToggleSkateboard(false);
+            AudioManager.PlaySoundEffect(_jumpSound);
             _animations.StartRamp();
             while (time < duration)
             {
@@ -180,6 +204,8 @@ public class Skater : MonoBehaviour
                 time += Time.deltaTime;
                 yield return null;
             }
+            AudioManager.PlaySoundEffect(_landSound);
+            AudioManager.ToggleSkateboard(true);
             IsDoingTrick = false;
         }
     }

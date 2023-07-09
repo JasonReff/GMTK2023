@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
-    [SerializeField] private AudioSource _music, _effects, _voice;
+    [SerializeField] private AudioSource _music, _effects, _voice, _skateboard;
     private static float _masterVolume = 0.5f, _musicVolume = 0.5f, _effectsVolume = 0.5f, _voiceVolume = 0.5f;
     private static float _minPitch = 0.9f, _maxpitch = 1.1f;
 
@@ -26,6 +26,11 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         float randomPitch = Random.Range(_minPitch, _maxpitch);
         Instance._effects.pitch = randomPitch;
         Instance._effects.PlayOneShot(audioClip);
+    }
+
+    public static void ToggleSkateboard(bool toggle)
+    {
+        Instance._skateboard.mute = toggle;
     }
 
     public static void PlayVoiceLine(AudioClip clip)
@@ -57,6 +62,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     {
         _effectsVolume = volume;
         Instance._effects.volume = volume * _masterVolume;
+        Instance._skateboard.volume = volume * _masterVolume;
     }
 
     public static void SetVoicesVolume(float volume)
