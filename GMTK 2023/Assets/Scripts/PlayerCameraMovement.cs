@@ -6,20 +6,17 @@ using DG.Tweening;
 public class PlayerCameraMovement : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
-    [SerializeField] private float _movementSpeed = 1f, _cameraMovementSpeed = 0.1f, _driftSpeed = 0.01f, _shakeRate = 0.2f, _shakeStrength = 1f;
+    [SerializeField] private Transform _swayTransform;
+    [SerializeField] private float _movementSpeed = 1f, _cameraMovementSpeed = 0.1f, _driftSpeed = 0.01f, _swayAmplitude, _swayFrequency;
     [SerializeField] private float _lowestBound, _highestBound, _leftestBound, _rightestBound;
+    [SerializeField] private Vector2 _sway;
     private float _shakeTimer = 0f;
 
     private void Update()
     {
         MovePosition(new Vector2(Input.GetAxisRaw("Horizontal") * _movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * _movementSpeed * Time.deltaTime));
         CameraDrift();
-        _shakeTimer += Time.deltaTime;
-        if (_shakeTimer > _shakeRate)
-        {
-            _shakeTimer = 0;
-            CameraShake();
-        }
+        CameraSway();
     }
 
     private void MovePosition(Vector2 movement)
@@ -49,8 +46,9 @@ public class PlayerCameraMovement : MonoBehaviour
         transform.localPosition = transform.localPosition - transform.localPosition * _driftSpeed * Time.deltaTime;
     }
 
-    private void CameraShake()
+    private void CameraSway()
     {
-        transform.DOShakePosition(0.1f, _shakeStrength);
+        _sway = new Vector2((Mathf.Sin(Time.time * _swayFrequency) * _swayAmplitude), Mathf.Sin((Time.time * _swayFrequency + 1) * _swayAmplitude));
+        _swayTransform.localPosition = _sway;
     }
 }
