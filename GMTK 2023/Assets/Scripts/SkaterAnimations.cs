@@ -6,7 +6,7 @@ public class SkaterAnimations : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _animationTime = 0.1f;
-    [SerializeField] private List<Sprite> _pumpSprites, _kickflipSprites, _jumpSprites, _crouchSprites, _startGrindSprites, _endGrindSprites;
+    [SerializeField] private List<Sprite> _pumpSprites, _kickflipSprites, _jumpSprites, _crouchSprites, _startGrindSprites, _endGrindSprites, _startRampSprites, _endRampSprites;
     private Coroutine _currentAnimation;
     public IEnumerator AnimationCoroutine(List<Sprite> sprites)
     {
@@ -57,5 +57,19 @@ public class SkaterAnimations : MonoBehaviour
         if (_currentAnimation != null)
             StopCoroutine(_currentAnimation);
         _currentAnimation = StartCoroutine(AnimationCoroutine(_endGrindSprites));
+    }
+
+    public void StartRamp()
+    {
+        if (_currentAnimation != null)
+            StopCoroutine(_currentAnimation);
+        _currentAnimation = StartCoroutine(AnimationCoroutine(_startRampSprites));
+    }
+
+    public void EndRamp()
+    {
+        if (_currentAnimation != null)
+            StopCoroutine(_currentAnimation);
+        _currentAnimation = StartCoroutine(AnimationCoroutine(_endRampSprites));
     }
 }

@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameOver: {fileID: 819164343}
   _timerTextbox: {fileID: 1397118061}
-  _timer: 120
+  _timer: 60
 --- !u!4 &819164345
 Transform:
   m_ObjectHideFlags: 0
@@ -1022,6 +1022,10 @@ PrefabInstance:
       propertyPath: _comboTextbox
       value: 
       objectReference: {fileID: 59716729}
+    - target: {fileID: 3639404042876927710, guid: c38e7725130abc34195c3319741fffdd, type: 3}
+      propertyPath: _scoreManager
+      value: 
+      objectReference: {fileID: 363209581}
     - target: {fileID: 5723093252566025914, guid: c38e7725130abc34195c3319741fffdd, type: 3}
       propertyPath: m_Name
       value: Camera
