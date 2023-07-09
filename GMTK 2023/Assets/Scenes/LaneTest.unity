@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 2103471754}
     - target: {fileID: 1649531841822841746, guid: 71c4822774e6f16498b1bb4e82b405d9, type: 3}
       propertyPath: _spawnRate
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1649531841822841746, guid: 71c4822774e6f16498b1bb4e82b405d9, type: 3}
       propertyPath: _focusLayer
@@ -1323,7 +1323,7 @@ PrefabInstance:
       objectReference: {fileID: 905453665}
     - target: {fileID: 1649531841822841746, guid: 71c4822774e6f16498b1bb4e82b405d9, type: 3}
       propertyPath: _spawnRate
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1649531841822841746, guid: 71c4822774e6f16498b1bb4e82b405d9, type: 3}
       propertyPath: _focusLayer

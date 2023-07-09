@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: UpLane
   m_EditorClassIdentifier: 
   FunctionalObjects:
-  - {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
+  - {fileID: 6086490256312620729, guid: 3c13227e6114fcb43a1bc3eab8cb9f53, type: 3}
+  - {fileID: 6086490256312620729, guid: 3c13227e6114fcb43a1bc3eab8cb9f53, type: 3}
   - {fileID: 6086490256312620729, guid: 3c13227e6114fcb43a1bc3eab8cb9f53, type: 3}
   - {fileID: 892115452259610415, guid: 4e46dc4d40973d04e8d8704d775ff509, type: 3}
+  - {fileID: 892115452259610415, guid: 4e46dc4d40973d04e8d8704d775ff509, type: 3}
+  - {fileID: -1116361871043220041, guid: a7f9ef1b74c2d834f87ea0061112426d, type: 3}
   - {fileID: 3226457534925424807, guid: 956110a54d05644489ac5cc5804e4161, type: 3}
   - {fileID: 2759426233852326116, guid: 24c356ad1d03db44f8e2acdd34e5f959, type: 3}
+  - {fileID: 891964512233785299, guid: 538d135b54474304eb06991490aa7f88, type: 3}
+  - {fileID: 8124866271501641182, guid: 67718a96c449dda4aae5d934f31478cc, type: 3}
   DecorativeObjects:
   - {fileID: 3151114986898025971, guid: 81d0cf1f3e3227147857df3a65778c8b, type: 3}
   - {fileID: 1340226224837567086, guid: d14fea203b4f93b4da82ba0ea68bf876, type: 3}
