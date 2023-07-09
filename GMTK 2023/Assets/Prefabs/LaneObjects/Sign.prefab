@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2759426233852326116, guid: 24c356ad1d03db44f8e2acdd34e5f959, type: 3}
       propertyPath: _spawnOffset
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2759426233852326116, guid: 24c356ad1d03db44f8e2acdd34e5f959, type: 3}
       propertyPath: _movementSpeed
@@ -76,7 +76,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sign
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5826643942386588321, guid: 24c356ad1d03db44f8e2acdd34e5f959, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
