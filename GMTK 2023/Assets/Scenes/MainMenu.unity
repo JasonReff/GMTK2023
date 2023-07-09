@@ -2760,8 +2760,8 @@ RectTransform:
   - {fileID: 655531086}
   - {fileID: 1226261948}
   - {fileID: 1491465445}
-  - {fileID: 2080598892}
   - {fileID: 1934016920}
+  - {fileID: 2080598892}
   - {fileID: 267151636}
   - {fileID: 398214200}
   - {fileID: 1924980862}
@@ -3682,11 +3682,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4a8fa96dd3bd1c44084b3d90c261fbdf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
