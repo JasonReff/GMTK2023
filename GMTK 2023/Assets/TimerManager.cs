@@ -7,6 +7,7 @@ public class TimerManager : MonoBehaviour
 {
     [SerializeField] private GameOverManager _gameOver;
     [SerializeField] private TextMeshProUGUI _timerTextbox;
+    [SerializeField] private CameraScore _cameraScore;
     [SerializeField] private float _timer = 120;
     private bool _gameEnded;
 
@@ -15,6 +16,7 @@ public class TimerManager : MonoBehaviour
         if (_timer <= 0 && _gameEnded == false)
         {
             _gameEnded = true;
+            _cameraScore.EndCombo();
             _gameOver.GameOver();
             return;
         }

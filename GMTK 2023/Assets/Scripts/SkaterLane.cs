@@ -12,11 +12,13 @@ public class SkaterLane : MonoBehaviour
     [SerializeField] private float _objectSize;
     [SerializeField] private SkaterLane _upLane, _downLane;
     [SerializeField] private int _sortingLayer;
+    [SerializeField] private float _skaterPosition;
 
     public int FocusLayer { get => _focusLayer; }
     public SkaterLane UpLane { get => _upLane;  }
     public SkaterLane DownLane { get => _downLane;  }
     public int SortingLayer { get => _sortingLayer; }
+    public float SkaterPosition { get => _skaterPosition; }
 
     private void Update()
     {

@@ -24,7 +24,7 @@ public class Skater : MonoBehaviour
     private float _pumpTimer, _moveTimer, _lossTimer;
     private List<float> _ratesSeen = new List<float>();
     public bool IsDoingTrick;
-    public static event Action OnTrick;
+    public static event Action OnTrick, OnTrickEnd;
 
     public void MoveToLane(SkaterLane lane)
     {
@@ -118,6 +118,7 @@ public class Skater : MonoBehaviour
             _rigidbody.drag = 5;
             AudioManager.PlaySoundEffect(_landSound);
             AudioManager.ToggleSkateboard(true);
+            OnTrickEnd?.Invoke();
         }
     }
 
@@ -133,6 +134,7 @@ public class Skater : MonoBehaviour
             OnTrick?.Invoke();
             yield return new WaitForSeconds(duration);
             IsDoingTrick = false;
+            OnTrickEnd?.Invoke();
         }
     }
 
@@ -169,6 +171,8 @@ public class Skater : MonoBehaviour
             }
             AudioManager.ToggleSkateboard(true);
             IsDoingTrick = false;
+            OnTrickEnd?.Invoke();
+            transform.localPosition = new Vector2(transform.localPosition.x, nextLane.SkaterPosition);
         }
     }
 
@@ -207,6 +211,7 @@ public class Skater : MonoBehaviour
             AudioManager.PlaySoundEffect(_landSound);
             AudioManager.ToggleSkateboard(true);
             IsDoingTrick = false;
+            OnTrickEnd?.Invoke();
         }
     }
 

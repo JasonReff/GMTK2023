@@ -500,6 +500,8 @@ MonoBehaviour:
   _focusTextbox: {fileID: 1655223778908978405}
   _frameTextbox: {fileID: 5437536246034432792}
   _comboTextbox: {fileID: 0}
+  _comboFinishedTextbox: {fileID: 0}
+  _comboSound: {fileID: 8300000, guid: 8b3de57baf180164fbb6b15b5bf300b3, type: 3}
 --- !u!1 &6359722967620033850
 GameObject:
   m_ObjectHideFlags: 0

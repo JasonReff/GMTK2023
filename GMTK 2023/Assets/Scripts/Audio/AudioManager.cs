@@ -30,7 +30,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
     public static void ToggleSkateboard(bool toggle)
     {
-        Instance._skateboard.mute = toggle;
+        if (Instance != null)
+            Instance._skateboard.mute = toggle;
     }
 
     public static void PlayVoiceLine(AudioClip clip)

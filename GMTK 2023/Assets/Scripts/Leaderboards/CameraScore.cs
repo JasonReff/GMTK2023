@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraScore : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class CameraScore : MonoBehaviour
     [SerializeField] private BlurManager _blurManager;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private float _scorePerSecond, _focusMultiplier, _zoomMultiplier;
-    [SerializeField] private TextMeshProUGUI _zoomTextbox, _focusTextbox, _frameTextbox, _comboTextbox;
-    private float _comboTimer, _comboScore, _timerLength = 1f;
+    [SerializeField] private TextMeshProUGUI _zoomTextbox, _focusTextbox, _frameTextbox, _comboTextbox, _comboFinishedTextbox;
+    [SerializeField] private AudioClip _comboSound;
+    private float _comboTimer, _comboScore, _timerLength = 0f;
     private int _overlappingColliders = 0;
     private bool _skaterInFocus;
-    private Coroutine _comboEnd;
 
     private void Update()
     {
@@ -22,7 +23,7 @@ public class CameraScore : MonoBehaviour
         if (_overlappingColliders == 0)
         {
             _comboTimer += Time.deltaTime;
-            if (_comboTimer >= _timerLength)
+            if (_comboTimer >= _timerLength && _comboScore != 0)
             {
                 AddScore(_comboScore);
                 _comboScore = 0;
@@ -115,6 +116,28 @@ public class CameraScore : MonoBehaviour
 
     private void AddScore(float score)
     {
+        if (score > 100)
+            AudioManager.PlaySoundEffect(_comboSound);
         _scoreManager.AddScore(score);
+        StartCoroutine(ComboFinishedCoroutine());
+
+        IEnumerator ComboFinishedCoroutine()
+        {
+            var startingY = _comboFinishedTextbox.transform.localPosition.y;
+            var startingScale = _comboFinishedTextbox.transform.localScale.x;
+            _comboFinishedTextbox.enabled = true;
+            _comboFinishedTextbox.text = $"+{(int)score}";
+            _comboFinishedTextbox.transform.DOLocalMoveY(startingY - 1f, 1f);
+            _comboFinishedTextbox.transform.DOScale(startingScale * 1.2f, 1f);
+            yield return new WaitForSeconds(1f);
+            _comboFinishedTextbox.enabled = false;
+            _comboFinishedTextbox.transform.localPosition = new Vector2(_comboFinishedTextbox.transform.localPosition.x, startingY);
+            _comboFinishedTextbox.transform.DOScale(startingScale, 0f);
+        }
+    }
+
+    public void EndCombo()
+    {
+        AddScore(_comboScore);
     }
 }

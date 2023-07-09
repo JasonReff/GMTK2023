@@ -9,11 +9,13 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 0;
         _pauseCanvas.SetActive(true);
+        AudioManager.ToggleSkateboard(false);
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
         _pauseCanvas.SetActive(false);
+        AudioManager.ToggleSkateboard(true);
     }
 }
