@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
     [SerializeField] private AudioSource _music, _effects, _voice, _skateboard;
-    private static float _masterVolume = 0.5f, _musicVolume = 0.5f, _effectsVolume = 0.5f, _voiceVolume = 0.5f;
+    private static float _masterVolume = 0.5f, _musicVolume = 0.25f, _effectsVolume = 0.5f, _voiceVolume = 0.5f;
     private static float _minPitch = 0.9f, _maxpitch = 1.1f;
 
     private void Start()

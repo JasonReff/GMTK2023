@@ -12,9 +12,11 @@ public class CameraScore : MonoBehaviour
     [SerializeField] private float _scorePerSecond, _focusMultiplier, _zoomMultiplier;
     [SerializeField] private TextMeshProUGUI _zoomTextbox, _focusTextbox, _frameTextbox, _comboTextbox, _comboFinishedTextbox;
     [SerializeField] private AudioClip _comboSound;
-    private float _comboTimer, _comboScore, _timerLength = 0f;
+    private float _comboTimer, _comboScore, _longestCombo, _timerLength = 0f;
     private int _overlappingColliders = 0;
     private bool _skaterInFocus;
+
+    public float LongestCombo { get => _longestCombo; }
 
     private void Update()
     {
@@ -25,6 +27,8 @@ public class CameraScore : MonoBehaviour
             _comboTimer += Time.deltaTime;
             if (_comboTimer >= _timerLength && _comboScore != 0)
             {
+                if (_comboScore > _longestCombo)
+                    _longestCombo = _comboScore;
                 AddScore(_comboScore);
                 _comboScore = 0;
             }
@@ -138,6 +142,8 @@ public class CameraScore : MonoBehaviour
 
     public void EndCombo()
     {
+        if (_comboScore > _longestCombo)
+            _longestCombo = _comboScore;
         AddScore(_comboScore);
     }
 }

@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] private CameraScore _cameraScore;
     [SerializeField] private ScoreKeeper _scoreKeeper;
     [SerializeField] private float _score = 0, _highScore = 0;
-    [SerializeField] private TextMeshProUGUI _scoreTextbox, _highScoreTextbox, _endScoreTextbox, _endHighScore;
+    [SerializeField] private TextMeshProUGUI _scoreTextbox, _highScoreTextbox, _endScoreTextbox, _endHighScore, _highestCombo;
     public int Score { get => (int)_score; set => _score = value; }
 
     private void Start()
@@ -22,6 +23,7 @@ public class ScoreManager : MonoBehaviour
         _highScoreTextbox.text = $"Record: {(int)_highScore}";
         _endScoreTextbox.text = $"Score: {Score}";
         _endHighScore.text = $"Record: {(int)_highScore}";
+        _highestCombo.text = $"Highest Combo: {(int)_cameraScore.LongestCombo}";
     }
 
     public void AddScore(float score)
